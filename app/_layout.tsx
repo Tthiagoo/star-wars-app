@@ -35,16 +35,13 @@ export default function RootLayout() {
     container: {
       flex: 1,
       paddingTop: 10,
-      backgroundColor: themeSelected === "light" ? "#e2e8f0" : "#1e293b",
-    },
-    slot: {
-      paddingTop: 5,
+      backgroundColor: themeSelected === "light" ? "#d4d4d8" : "#1e293b",
     },
   });
   return (
     <ThemeProvider>
       <StatusBar
-        backgroundColor={themeSelected == "light" ? "#e2e8f0" : "#1e293b"}
+        backgroundColor={themeSelected == "light" ? "#d4d4d8" : "#1e293b"}
       />
       <SafeAreaView style={styles.container}>
         <ButtonToogle />

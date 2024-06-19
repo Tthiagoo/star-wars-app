@@ -5,7 +5,13 @@ export function ButtonToogle() {
   const { colorScheme: themeSelected, setColorScheme } = useColorScheme();
   return (
     <Button
-      icon={<Feather name="moon" size={24} color="black" />}
+      icon={
+        <Feather
+          name={themeSelected === "dark" ? "moon" : "sun"}
+          size={24}
+          color="black"
+        />
+      }
       className="mr-6 self-end"
       onPress={() =>
         setColorScheme(themeSelected === "dark" ? "light" : "dark")
