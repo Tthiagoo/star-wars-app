@@ -11,12 +11,26 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { Slot } from "expo-router";
 import "../global.css";
+import { Text } from "react-native";
+import { Button } from "@/components/Button";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
+export function ModeToggle() {
+  const { colorScheme, setColorScheme } = useColorScheme();
+
+  return (
+    <Button
+      label="test"
+      onPress={() => setColorScheme(colorScheme === "dark" ? "light" : "dark")}
+    >
+      Toggle mode
+    </Button>
+  );
+}
+
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
@@ -32,8 +46,8 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ title: "Home" }} />
-    </Stack>
+    <>
+      <Slot />
+    </>
   );
 }
