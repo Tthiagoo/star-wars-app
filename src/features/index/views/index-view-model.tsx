@@ -12,13 +12,16 @@ export default function IndexViewModel() {
       name: "Luke Skywalker",
       gender: "male",
       height: "177",
+      skin_color: "white",
+      mass: "77",
       favorite: true,
     },
     {
       name: "Leia Organa",
+      skin_color: "white",
       gender: "female",
       height: "177",
-
+      mass: "78",
       favorite: false,
     },
   ];

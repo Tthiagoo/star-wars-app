@@ -6,7 +6,7 @@ export default function FavoriteButton() {
     <AntDesign
       name="heart"
       className="justify-self-end"
-      size={20}
+      size={25}
       color="red"
     />
   );
