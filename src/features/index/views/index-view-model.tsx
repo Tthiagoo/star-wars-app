@@ -24,6 +24,22 @@ export default function IndexViewModel() {
       mass: "78",
       favorite: false,
     },
+    {
+      name: "Leia Organa",
+      skin_color: "white",
+      gender: "female",
+      height: "177",
+      mass: "78",
+      favorite: false,
+    },
+    {
+      name: "Leia Organa",
+      skin_color: "white",
+      gender: "female",
+      height: "177",
+      mass: "78",
+      favorite: false,
+    },
   ];
   return (
     <View className="flex items-center ">
@@ -33,15 +49,17 @@ export default function IndexViewModel() {
         style={{
           width: "35%",
           height: "35%",
-          marginBottom: -20,
-          marginTop: -20,
+          marginBottom: -60,
+          marginTop: -60,
         }}
         placeholder={{ blurhash }}
       />
       <Text className="text-black text-lg font-bold dark:text-white">
         May the force be with you!
       </Text>
-      <CharacterList characters={mockCharacters} />
+      <View style={{ height: 480, marginTop: 15 }}>
+        <CharacterList characters={mockCharacters} />
+      </View>
     </View>
   );
 }

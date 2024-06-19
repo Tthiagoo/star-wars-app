@@ -11,8 +11,9 @@ export const CharacterList: React.FC<CharacterProps> = ({ characters }) => {
   return (
     <FlatList
       data={characters}
-      keyExtractor={(item) => item.name} // Assumindo que homeworld é único por simplicidade
+      keyExtractor={(item) => item.name}
       renderItem={({ item }) => <CharacterItem item={item} />}
+      contentContainerStyle={{ paddingBottom: 20 }}
     />
   );
 };
