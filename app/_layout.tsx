@@ -1,9 +1,4 @@
-import { useColorScheme } from "@/hooks/useColorScheme";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
+import { DarkTheme, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
@@ -11,22 +6,23 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { Slot } from "expo-router";
 import "../global.css";
-import { Text } from "react-native";
+import { StatusBar, Text } from "react-native";
 import { Button } from "@/components/Button";
+import { colorScheme, useColorScheme } from "nativewind";
+import { ThemeProvider } from "@/provider/theme-provider";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-export function ModeToggle() {
+function ButtonToogle() {
   const { colorScheme, setColorScheme } = useColorScheme();
 
   return (
     <Button
-      label="test"
+      label="Toggle mode"
+      className="mt-10"
       onPress={() => setColorScheme(colorScheme === "dark" ? "light" : "dark")}
-    >
-      Toggle mode
-    </Button>
+    />
   );
 }
 
@@ -46,8 +42,10 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <ThemeProvider>
+      <StatusBar backgroundColor={"#455"} />
+      <ButtonToogle />
       <Slot />
-    </>
+    </ThemeProvider>
   );
 }
