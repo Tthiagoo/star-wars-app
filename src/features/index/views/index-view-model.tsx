@@ -1,6 +1,7 @@
 import React from "react";
 import { StatusBar, Text, View } from "react-native";
 import { Image } from "expo-image";
+import CharacterList from "../components/character-list";
 
 export default function IndexViewModel() {
   const blurhash =
