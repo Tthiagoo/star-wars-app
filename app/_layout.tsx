@@ -37,6 +37,9 @@ export default function RootLayout() {
       paddingTop: 10,
       backgroundColor: themeSelected === "light" ? "#e2e8f0" : "#1e293b",
     },
+    slot: {
+      paddingTop: 5,
+    },
   });
   return (
     <ThemeProvider>

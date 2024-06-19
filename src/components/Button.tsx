@@ -1,6 +1,8 @@
 import { type VariantProps, cva } from "class-variance-authority";
 import { Text, TouchableOpacity } from "react-native";
 import { cn } from "../../lib/utils";
+import { Feather } from "@expo/vector-icons";
+import { Icon } from "@expo/vector-icons/build/createIconSet";
 
 const buttonVariants = cva(
   "flex flex-row items-center justify-center rounded-md",
@@ -50,8 +52,9 @@ const buttonTextVariants = cva("text-center font-medium", {
 interface ButtonProps
   extends React.ComponentPropsWithoutRef<typeof TouchableOpacity>,
     VariantProps<typeof buttonVariants> {
-  label: string;
+  label?: string;
   labelClasses?: string;
+  icon?: React.ReactElement;
 }
 function Button({
   label,
@@ -59,6 +62,7 @@ function Button({
   className,
   variant,
   size,
+  icon,
   ...props
 }: ButtonProps) {
   return (
@@ -66,6 +70,7 @@ function Button({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
+      {icon}
       <Text
         className={cn(
           buttonTextVariants({ variant, size, className: labelClasses }),
