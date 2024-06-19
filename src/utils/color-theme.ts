@@ -2,7 +2,7 @@ import { vars } from "nativewind";
 
 export const themes = {
   light: vars({
-    "--color-primary-default": "#3a5e96",
+    "--color-primary-default": "#facc15",
     "--color-primary-light": "#5bd1e7",
     "--color-secondary-default": "#9b6cca",
     "--color-secondary-light": "#dfbeff",
@@ -17,7 +17,7 @@ export const themes = {
     "--color-overlay": "rgba(0, 0, 0, .05)",
   }),
   dark: vars({
-    "--color-primary-default": "#3a5e96",
+    "--color-primary-default": "#facc15",
     "--color-primary-light": "#5bd1e7",
     "--color-secondary-default": "#9b6cca",
     "--color-secondary-light": "#dfbeff",

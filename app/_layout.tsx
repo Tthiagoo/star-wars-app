@@ -6,27 +6,18 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { Slot } from "expo-router";
 import "../global.css";
-import { StatusBar, Text } from "react-native";
+import { StatusBar, Text, StyleSheet } from "react-native";
 import { Button } from "@/components/Button";
-import { colorScheme, useColorScheme } from "nativewind";
+import { useColorScheme } from "nativewind";
 import { ThemeProvider } from "@/provider/theme-provider";
+import { ButtonToogle } from "@/components/button-theme";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
-function ButtonToogle() {
-  const { colorScheme, setColorScheme } = useColorScheme();
-
-  return (
-    <Button
-      label="Toggle mode"
-      className="mt-10"
-      onPress={() => setColorScheme(colorScheme === "dark" ? "light" : "dark")}
-    />
-  );
-}
-
 export default function RootLayout() {
+  const { colorScheme: themeSelected } = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
@@ -40,12 +31,22 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      paddingTop: 10,
+      backgroundColor: themeSelected === "light" ? "#e2e8f0" : "#1e293b",
+    },
+  });
   return (
     <ThemeProvider>
-      <StatusBar backgroundColor={"#455"} />
-      <ButtonToogle />
-      <Slot />
+      <StatusBar
+        backgroundColor={themeSelected == "light" ? "#e2e8f0" : "#1e293b"}
+      />
+      <SafeAreaView style={styles.container}>
+        <ButtonToogle />
+        <Slot />
+      </SafeAreaView>
     </ThemeProvider>
   );
 }
