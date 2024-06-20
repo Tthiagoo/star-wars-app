@@ -11,7 +11,7 @@
   
   ## :books: Sobre o projeto
 	
-É um app onde podemos visulizar nomes de personagens de star wars e suas informações
+É um app feito com react native e expo onde podemos visulizar nomes de personagens de star wars e suas informações
 
 ## :arrow_forward: Usando a aplicação
 O usuarios poderão entrar na tela inicial e visualizar uma lista
@@ -36,6 +36,7 @@ O usuarios poderão entrar na tela inicial e visualizar uma lista
 
 ## :computer: Tecnologias Utilizadas
 - [React Native](https://reactnative.dev/)
+- [Expo](https://docs.expo.dev/)
 - [Native Wind](https://www.nativewind.dev/)
 - [NativeCn](https://nativecn.mintlify.app/introduction)
 - [TanstackQuery](https://tanstack.com/query/latest)
