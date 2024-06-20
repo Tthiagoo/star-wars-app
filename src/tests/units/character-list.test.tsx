@@ -6,7 +6,7 @@ import {
 } from "@/features/index/types/people-list-types";
 import CharacterList from "@/features/index/components/character-list";
 
-const mockCharacters: ISimpleCharacter[] = [
+const mockCharacters: ICharacter[] = [
   {
     name: "Luke Skywalker",
     favorite: false,

@@ -8,7 +8,7 @@ import { blurhash } from "@/constants/blurhash";
 import { CustomText } from "@/components/text-custom";
 import { SkeletonLoading } from "../components/skeleton-loading";
 
-export default function IndexViewModel() {
+export function IndexViewModel() {
   const { data, error, isLoading } = usePeopleList();
 
   return (

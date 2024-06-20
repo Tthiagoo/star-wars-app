@@ -7,7 +7,10 @@ import FavoriteButton from "./favorite-button";
 
 export function CharacterItem({ item }) {
   return (
-    <View className="flex m-5  gap-8 border-2 border-amber-500 rounded-lg w-80 px-3 py-5 dark:border-amber-400">
+    <View
+      testID="character-item"
+      className="flex m-5  gap-8 border-2 border-amber-500 rounded-lg w-80 px-3 py-5 dark:border-amber-400"
+    >
       <View className="flex flex-row items-center justify-between">
         <CustomText className="text-2xl text-amber-500 font-bold dark:text-amber-400 flex-1 text-center">
           {item.name}
