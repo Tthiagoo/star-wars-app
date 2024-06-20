@@ -41,7 +41,6 @@ export function IndexViewModel() {
           marginBottom: -35,
           marginTop: -60,
         }}
-        placeholder={{ blurhash }}
       />
       <Text className="text-black text-lg font-bold dark:text-white">
         May the force be with you!
