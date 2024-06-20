@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+<h1 align="center" justify="center">
+    Star Wars App
+  </h1>
+  
+  <div align="center">
+      <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/a97955e2-0f8f-45ad-8baf-1146010fe592">
+       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/00068223-a92e-46c9-a04e-50a8d411f710">
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+  </div>
 
-## Get started
+  
+  ## :books: Sobre o projeto
+	
+É um app onde podemos visulizar nomes de personagens de star wars e suas informações
 
-1. Install dependencies
+## :arrow_forward: Usando a aplicação
+O usuarios poderão entrar na tela inicial e visualizar uma lista
 
-   ```bash
-   npm install
-   ```
+### Funcionalidades
+- Visualizar cards com nomes de personagens;
+- Exibir um Skeleton para dar feedback visual do carregamento
+- Exibir informações dos filmes desses personagens;
+- Favoritar um personagem que irá persistir localmente no dispositivo
 
-2. Start the app
+### :computer: Sobre a arquitetura
+- A versão do app usa o expo router, onde as telas são criadas a partir da pasta APP, cada arquivo gera um rota dentro do app
+- O app usa uma estilização baseada em TailwindCSS e shadcn ui, onde podemos criar interfaces mais rapidas e escalaveis
+- A arquitetura em si é baseada em MVVM, onde temos uma viewlModel que se torna uma camada de intersecção entre as funcionalidades e components
+- O testes cobrem componentes e viewModel, juntamente com as mock das chamadas API
+- Foi utilizado o tanstack query para gerenciar estados HTTP e cacheamento das requisições, evitando multiplas chamadas e mais facilidade em codar;
+- Apliquei um infinitScroll com FlatList e tanstack query, posibilitando paginação ao rolar a lista ate o final, com feedback de carregamento baseado em skeleton
+  
 
-   ```bash
-    npx expo start
-   ```
+## :computer: Tecnologias Utilizadas
+- [React Native](https://reactnative.dev/)
+- [Native Wind](https://www.nativewind.dev/)
+- [NativeCn](https://nativecn.mintlify.app/introduction)
+- [TanstackQuery](https://tanstack.com/query/latest)
+- [Commitizen](https://github.com/commitizen/cz-cli)
+- [Commitlint](https://commitlint.js.org/)
+- [Jest](https://jestjs.io/pt-BR/)
+- [React Native Testing Library](https://testing-library.com/docs/react-native-testing-library/intro/)
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 🚀 Como executar o projeto
 
 ```bash
-npm run reset-project
+# Clone este repositório
+$ git clone [https://github.com/Tthiagoo/githubCase](https://github.com/Tthiagoo/star-wars-app)
+
+# Instale as dependências com npm ou yarn
+$ npm install
+
+# Execute a aplicação
+$ npm run start
+
+# Utilize um emulador ou uso o app do expo go
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Rodando a aplicação
+Baixe o apk: 
+  
