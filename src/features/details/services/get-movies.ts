@@ -1,6 +1,5 @@
 // api.ts
-import { ICharacter } from "@/features/index/types/people-list-types";
-import { api } from "@/services/api";
+
 import axios from "axios";
 import { Film } from "../types/movies";
 

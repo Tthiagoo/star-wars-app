@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 import Index from "../../../app";
-import { Button } from "@/components/Button";
+import { Button } from "@/shared/Button";
 
 describe("Index Component", () => {
   it("should render the text correctly", () => {

@@ -6,11 +6,11 @@ import {
   TouchableHighlight,
   TouchableOpacity,
 } from "react-native";
-import { ICharacter, ISimpleCharacter } from "../types/people-list-types";
+import { IPeopleList, ISimpleCharacter } from "../types/people-list-types";
 import { CharacterItem } from "./character-item";
 
 interface CharacterProps {
-  characters: ICharacter[];
+  characters: IPeopleList[];
 }
 
 export const CharacterList: React.FC<CharacterProps> = ({ characters }) => {

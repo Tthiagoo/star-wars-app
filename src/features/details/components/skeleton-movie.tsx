@@ -1,6 +1,6 @@
 import React from "react";
-import { Skeleton } from "../../../components/Skeleton";
-import { CustomText } from "@/components/text-custom";
+import { Skeleton } from "../../../shared/Skeleton";
+
 import { View } from "react-native";
 
 export function SkeletonMovieLoading() {

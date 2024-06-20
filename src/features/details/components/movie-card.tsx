@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/components/Card";
-import { CustomText } from "@/components/text-custom";
+} from "@/shared/Card";
+import { CustomText } from "@/shared/text-custom";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { Film } from "../types/movies";

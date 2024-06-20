@@ -1,8 +1,8 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useCallback, useMemo, useState } from "react";
 import _ from "lodash";
-import axios from "axios";
 import { api } from "@/services/api";
+import { IPeopleListResponse } from "../types/people-list-types";
 
 type Params<F> = {
   key: string[];
@@ -11,16 +11,18 @@ type Params<F> = {
   filters?: F;
 };
 
-export const useInfiniteScroll = <T = unknown, F = object>({
+export const useInfiniteScroll = <T = IPeopleListResponse, F = object>({
   key,
 }: Params<F>) => {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const queryFn = async ({ pageParam = 1 }) => {
-    const { data: dataQuery } = await api.get<T[]>(`people/?page=${pageParam}`);
+    const { data } = await api.get<IPeopleListResponse>(
+      `people/?page=${pageParam}`,
+    );
 
     return {
-      data: dataQuery.results,
-      next: dataQuery.next,
+      data: data.results,
+      next: data.next,
       nextPage: pageParam + 1,
     };
   };
@@ -30,7 +32,7 @@ export const useInfiniteScroll = <T = unknown, F = object>({
       queryFn,
       initialPageParam: 1,
       getNextPageParam: (lastPage, __, lastPageParam) => {
-        if (lastPage.data.next === null) {
+        if (lastPage.next === null) {
           return undefined;
         }
         return lastPageParam + 1;

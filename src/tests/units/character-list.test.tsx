@@ -1,12 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import {
-  ICharacter,
-  ISimpleCharacter,
-} from "@/features/index/types/people-list-types";
-import CharacterList from "@/features/index/components/character-list";
 
-const mockCharacters: ICharacter[] = [
+import CharacterList from "@/features/index/components/character-list";
+import { StarWarsCharacter } from "@/features/details/types/details-character";
+
+const mockCharacters: StarWarsCharacter[] = [
   {
     name: "Luke Skywalker",
     gender: "male",

@@ -1,4 +1,4 @@
-import { CustomText } from "@/components/text-custom";
+import { CustomText } from "@/shared/text-custom";
 import { Feather } from "@expo/vector-icons";
 import React, { memo } from "react";
 import { View, Text } from "react-native";

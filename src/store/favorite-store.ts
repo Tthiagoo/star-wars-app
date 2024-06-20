@@ -22,8 +22,8 @@ const useFavoriteStore = create<FavoriteStore>()(
       },
     }),
     {
-      name: "favorites", // name of the item in the storage (must be unique)
-      getStorage: () => AsyncStorage, // specify which storage to use
+      name: "favorites",
+      getStorage: () => AsyncStorage,
     },
   ),
 );

@@ -2,19 +2,16 @@ import React, { useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  Pressable,
-  RefreshControl,
-  StatusBar,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import { Image } from "expo-image";
-import CharacterList from "../components/character-list";
-import { ICharacter, ISimpleCharacter } from "../types/people-list-types";
-import usePeopleList from "../hooks/use-people-list";
+
+import { IPeopleListResponse } from "../types/people-list-types";
+
 import { blurhash } from "@/constants/blurhash";
-import { CustomText } from "@/components/text-custom";
+
 import {
   SkeletonLoading,
   SkeletonLoadingUnit,
@@ -22,19 +19,14 @@ import {
 import { useInfiniteScroll } from "../hooks/use-people-list-infinite";
 import CharacterItem from "../components/character-item";
 import { Link } from "expo-router";
-type TFilters = {
-  search: string;
-};
 
 export function IndexViewModel() {
-  // const { data, error, isLoading } = usePeopleList();
-
   const {
     data: dataInifinite,
 
     onEndReached,
     isFetchingNextPage,
-  } = useInfiniteScroll<ICharacter>({
+  } = useInfiniteScroll<IPeopleListResponse>({
     key: ["people"],
   });
 
@@ -77,7 +69,7 @@ export function IndexViewModel() {
           contentContainerStyle={{ paddingBottom: 20 }}
           ListEmptyComponent={<SkeletonLoading />}
           ListFooterComponent={
-            <View>{isFetchingNextPage && <ActivityIndicator />}</View>
+            <View>{isFetchingNextPage && <SkeletonLoading />}</View>
           }
         />
       </View>

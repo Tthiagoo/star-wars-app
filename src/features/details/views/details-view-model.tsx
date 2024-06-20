@@ -1,23 +1,28 @@
-import { CustomText } from "@/components/text-custom";
+import { CustomText } from "@/shared/text-custom";
 import React from "react";
 import { ScrollView, View, Text, FlatList } from "react-native";
 import MovieCard from "../components/movie-card";
 import { StarWarsCharacter } from "../types/details-character";
 import { useLocalSearchParams } from "expo-router";
 import { useMovieList } from "../hooks/use-movie-list";
-import { SkeletonLoading } from "@/features/index/components/skeleton-loading";
+
 import { SkeletonMovieLoading } from "../components/skeleton-movie";
 
+/**
+ * Details caracter selected
+ *
+ * @returns void
+ */
 export default function DetailsViewModel() {
-  const { info } = useLocalSearchParams();
+  const { info: infoCharacterSelected } = useLocalSearchParams();
 
-  const data: StarWarsCharacter = JSON.parse(info);
+  const data: StarWarsCharacter = JSON.parse(infoCharacterSelected);
   const { data: movies, error, isLoading } = useMovieList(data.films);
 
   return (
     <ScrollView contentContainerStyle={{ padding: 15 }}>
       {/* Header Section */}
-      <View className="bg-amber-500 p-5 ">
+      <View className="bg-amber-500 p-5 rounded-md ">
         <Text className="text-white text-4xl font-bold text-center">
           {data.name}
         </Text>

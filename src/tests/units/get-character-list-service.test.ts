@@ -1,5 +1,5 @@
 import { getPeopleList } from "@/features/index/services/get-people-service";
-import { ICharacter } from "@/features/index/types/people-list-types";
+import { IPeopleListResponse } from "@/features/index/types/people-list-types";
 import { api } from "@/services/api";
 
 jest.mock("@/services/api");
@@ -13,7 +13,7 @@ describe("getPeopleList", () => {
   });
 
   it("should fetch and return the people list", async () => {
-    const mockData: ICharacter = [
+    const mockData: IPeopleListResponse = [
       {
         name: "Leia Organa",
         skin_color: "white",
