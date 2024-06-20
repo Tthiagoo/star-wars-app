@@ -1,28 +1,17 @@
 import React, { useState } from "react";
-import {
-  ActivityIndicator,
-  FlatList,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { Image } from "expo-image";
 
 import { IPeopleListResponse } from "../types/people-list-types";
 
-import { blurhash } from "@/constants/blurhash";
-
-import {
-  SkeletonLoading,
-  SkeletonLoadingUnit,
-} from "../components/skeleton-loading";
+import { SkeletonLoading } from "../components/skeleton-loading";
 import { useInfiniteScroll } from "../hooks/use-people-list-infinite";
 import CharacterItem from "../components/character-item";
 import { Link } from "expo-router";
 
 export function IndexViewModel() {
   const {
-    data: dataInifinite,
+    data: infoDataPeopleResponse,
 
     onEndReached,
     isFetchingNextPage,
@@ -47,7 +36,7 @@ export function IndexViewModel() {
       </Text>
       <View style={{ height: 480, marginTop: 15 }}>
         <FlatList
-          data={dataInifinite}
+          data={infoDataPeopleResponse}
           onEndReached={onEndReached}
           initialNumToRender={10}
           removeClippedSubviews={true}

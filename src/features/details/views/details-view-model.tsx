@@ -10,11 +10,11 @@ import { SkeletonMovieLoading } from "../components/skeleton-movie";
 
 /**
  * Details caracter selected
- *
+ * * In the expo, dynamic routes have access to route parameters
  * @returns void
  */
 export default function DetailsViewModel() {
-  const { info: infoCharacterSelected } = useLocalSearchParams();
+  const { info: infoCharacterSelected } = useLocalSearchParams(); // data source
 
   const data: StarWarsCharacter = JSON.parse(infoCharacterSelected);
   const { data: movies, error, isLoading } = useMovieList(data.films);
