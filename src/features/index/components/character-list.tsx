@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableHighlight,
+  TouchableOpacity,
+} from "react-native";
 import { ICharacter, ISimpleCharacter } from "../types/people-list-types";
 import { CharacterItem } from "./character-item";
 
@@ -12,7 +18,11 @@ export const CharacterList: React.FC<CharacterProps> = ({ characters }) => {
     <FlatList
       data={characters}
       keyExtractor={(item) => item.name}
-      renderItem={({ item }) => <CharacterItem item={item} />}
+      renderItem={({ item }) => (
+        <TouchableOpacity onPress={() => console.log("chamouuu")}>
+          <CharacterItem item={item} />
+        </TouchableOpacity>
+      )}
       contentContainerStyle={{ paddingBottom: 20 }}
     />
   );

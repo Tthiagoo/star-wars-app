@@ -15,7 +15,7 @@ export function CharacterItem({ item }) {
         <CustomText className="text-2xl text-amber-500 font-bold dark:text-amber-400 flex-1 text-center">
           {item.name}
         </CustomText>
-        <FavoriteButton />
+        <FavoriteButton characterName={item.name} />
       </View>
       <View className="gap-3">
         <View className="flex flex-row justify-between">

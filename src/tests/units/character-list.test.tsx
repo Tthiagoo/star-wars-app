@@ -9,7 +9,6 @@ import CharacterList from "@/features/index/components/character-list";
 const mockCharacters: ICharacter[] = [
   {
     name: "Luke Skywalker",
-    favorite: false,
     gender: "male",
     height: "177",
   },
