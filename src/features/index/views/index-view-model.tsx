@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
+  Pressable,
   RefreshControl,
   StatusBar,
   Text,
@@ -20,6 +21,7 @@ import {
 } from "../components/skeleton-loading";
 import { useInfiniteScroll } from "../hooks/use-people-list-infinite";
 import CharacterItem from "../components/character-item";
+import { Link } from "expo-router";
 type TFilters = {
   search: string;
 };
@@ -58,11 +60,19 @@ export function IndexViewModel() {
           onEndReached={onEndReached}
           initialNumToRender={10}
           removeClippedSubviews={true}
-          keyExtractor={(item) => item.name}
-          renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => console.log("test")}>
-              <CharacterItem item={item} />
-            </TouchableOpacity>
+          keyExtractor={(item, key) => item.name}
+          renderItem={({ item, index }) => (
+            <Link
+              href={{
+                pathname: "/details/[info]",
+                params: { info: JSON.stringify(item) },
+              }}
+              asChild
+            >
+              <TouchableOpacity>
+                <CharacterItem item={item} />
+              </TouchableOpacity>
+            </Link>
           )}
           contentContainerStyle={{ paddingBottom: 20 }}
           ListEmptyComponent={<SkeletonLoading />}
