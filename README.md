@@ -58,7 +58,7 @@ $ npm install
 # Execute a aplicação
 $ npm run start
 
-# Utilize um emulador ou uso o app do expo go
+# Utilize um emulador ou use o app do expo go para escanear o codigo QR Code
 ```
 
 
