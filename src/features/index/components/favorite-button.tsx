@@ -3,7 +3,11 @@ import { AntDesign, Feather, FontAwesome } from "@expo/vector-icons";
 import React from "react";
 import { TouchableOpacity } from "react-native";
 
-export default function FavoriteButton({ characterName }) {
+interface props {
+  characterName: string;
+}
+
+export default function FavoriteButton({ characterName }: props) {
   const { favorites, toggleFavorite } = useFavoriteStore();
   const isFavorite = favorites.some((fav) => fav === characterName);
   return (

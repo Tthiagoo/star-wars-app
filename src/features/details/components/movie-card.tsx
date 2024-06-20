@@ -15,7 +15,7 @@ interface props {
   movieInfo: Film;
 }
 
-const MovieCard = React.memo(({ movieInfo }: { movieInfo }) => {
+const MovieCard = React.memo(({ movieInfo }: props) => {
   const [showFullText, setShowFullText] = useState(false);
 
   const toggleShowFullText = () => {
