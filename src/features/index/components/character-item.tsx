@@ -1,11 +1,11 @@
 import { CustomText } from "@/components/text-custom";
 import { Feather } from "@expo/vector-icons";
-import React from "react";
+import React, { memo } from "react";
 import { View, Text } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import FavoriteButton from "./favorite-button";
 
-export function CharacterItem({ item }) {
+const CharacterItem = React.memo(({ item }: { item }) => {
   return (
     <View
       testID="character-item"
@@ -39,4 +39,6 @@ export function CharacterItem({ item }) {
       </View>
     </View>
   );
-}
+});
+
+export default CharacterItem;

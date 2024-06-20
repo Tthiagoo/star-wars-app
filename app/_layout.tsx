@@ -47,7 +47,6 @@ export default function RootLayout() {
           backgroundColor={themeSelected == "light" ? "#e2e2e2" : "#1e293b"}
         />
         <SafeAreaView style={styles.container}>
-          <ButtonToogle />
           <Slot />
         </SafeAreaView>
       </QueryClientProvider>
