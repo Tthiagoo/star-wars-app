@@ -10,7 +10,12 @@ type Params<F> = {
   limit?: number;
   filters?: F;
 };
-
+/**
+ * hook that uses react query to load an infinite list of characters
+ * * it uses functions based on the final scroll to go to the next page
+ * @param param0
+ * @returns
+ */
 export const useInfiniteScroll = <T = IPeopleListResponse, F = object>({
   key,
 }: Params<F>) => {

@@ -23,7 +23,7 @@ const MovieCard = React.memo(({ movieInfo }: { movieInfo }) => {
   };
 
   return (
-    <View className="flex w-72 gap-2 ml-4">
+    <View className="flex w-72 gap-2 ml-3">
       <Card>
         <CardHeader>
           <CardTitle>{movieInfo.title}</CardTitle>

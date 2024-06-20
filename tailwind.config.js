@@ -4,7 +4,7 @@ module.exports = {
     "./App.{js,jsx,ts,tsx}",
 
     "./app/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/shared/**/*.{js,jsx,ts,tsx}",
     "./src/features/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {

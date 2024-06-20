@@ -53,7 +53,7 @@ export function IndexViewModel() {
           initialNumToRender={10}
           removeClippedSubviews={true}
           keyExtractor={(item, key) => item.name}
-          renderItem={({ item, index }) => (
+          renderItem={({ item }) => (
             <Link
               href={{
                 pathname: "/details/[info]",
