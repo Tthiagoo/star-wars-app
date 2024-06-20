@@ -7,28 +7,44 @@ import {
   CardFooter,
 } from "@/components/Card";
 import { CustomText } from "@/components/text-custom";
-import React from "react";
-import { View, Text } from "react-native";
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { Film } from "../types/movies";
 
-export function MovieCard() {
+interface props {
+  movieInfo: Film;
+}
+
+const MovieCard = React.memo(({ movieInfo }: { movieInfo }) => {
+  const [showFullText, setShowFullText] = useState(false);
+
+  const toggleShowFullText = () => {
+    setShowFullText(!showFullText);
+  };
+
   return (
-    <View className="flex w-72 gap-2 mx-5">
+    <View className="flex w-72 gap-2 ml-4">
       <Card>
         <CardHeader>
-          <CardTitle>Accelerate UI</CardTitle>
-          <CardDescription>Enter a new development experience</CardDescription>
+          <CardTitle>{movieInfo.title}</CardTitle>
+          <CardDescription>Episode {movieInfo.episode_id}</CardDescription>
         </CardHeader>
         <CardContent>
-          <CustomText className="text-base">
-            Sleek, easy to use components to build your next app faster.
-          </CustomText>
+          <TouchableOpacity onPress={toggleShowFullText}>
+            <CustomText className="text-base">
+              {showFullText
+                ? movieInfo.opening_crawl
+                : `${movieInfo.opening_crawl.substring(0, 100)} (show more...)`}
+            </CustomText>
+          </TouchableOpacity>
         </CardContent>
         <CardFooter>
-          <CustomText className="text-sm text-yellow-200">
-            Inspired by shadcn/ui
+          <CustomText className="text-sm font-bold text-yellow-200">
+            Director: {movieInfo.director}
           </CustomText>
         </CardFooter>
       </Card>
     </View>
   );
-}
+});
+export default MovieCard;
