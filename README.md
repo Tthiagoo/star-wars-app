@@ -62,5 +62,5 @@ $ npm run start
 
 
 ### Rodando a aplicação
-Baixe o apk: 
+Baixe o apk: https://drive.google.com/file/d/1a9VfhkQ6H9wGRxN76yczj0cGHZb5gO08/view?usp=sharing
   
