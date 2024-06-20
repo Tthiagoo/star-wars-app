@@ -56,12 +56,12 @@ export function IndexViewModel() {
             <Link
               href={{
                 pathname: "/details/[info]",
-                params: { info: JSON.stringify(item) },
+                params: { info: JSON.stringify(item) }, // go to the next page with params info character
               }}
               asChild
             >
               <TouchableOpacity>
-                <CharacterItem item={item} />
+                <CharacterItem info={item} />
               </TouchableOpacity>
             </Link>
           )}

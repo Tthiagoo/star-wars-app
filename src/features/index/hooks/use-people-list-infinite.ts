@@ -13,6 +13,7 @@ type Params<F> = {
 /**
  * hook that uses react query to load an infinite list of characters
  * * it uses functions based on the final scroll to go to the next page
+ * * When calling a function, it will return several states and function to manipulate the HTTP state of the component it will use
  * @param param0
  * @returns
  */

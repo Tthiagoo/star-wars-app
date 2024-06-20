@@ -1,6 +1,6 @@
 import React from "react";
 import { Skeleton } from "../../../shared/Skeleton";
-import { CustomText } from "@/shared/text-custom";
+
 import { View } from "react-native";
 
 export function SkeletonLoading() {
