@@ -4,11 +4,12 @@
   
   <div align="center">
       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/a97955e2-0f8f-45ad-8baf-1146010fe592">
-       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/00068223-a92e-46c9-a04e-50a8d411f710">
+       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/7cfa4849-5d76-4c71-87cd-074ac601a208">
 
   </div>
 
-  
+ 
+
   ## :books: Sobre o projeto
 	
 É um app feito com react native e expo onde podemos visulizar nomes de personagens de star wars e suas informações
