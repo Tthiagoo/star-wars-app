@@ -11,30 +11,32 @@
   
   ## :books: Sobre o projeto
 	
-É um app onde podemos visulizar nomes de personagens de star wars e suas informações
+É um app feito com react native e expo onde podemos visulizar nomes de personagens de star wars e suas informações
 
 ## :arrow_forward: Usando a aplicação
 O usuarios poderão entrar na tela inicial e visualizar uma lista
 
 ### Funcionalidades
 - Visualizar cards com nomes de personagens;
-- Exibir um Skeleton para dar feedback visual do carregamento
+- Exibir um Skeleton para dar feedback visual do carregamento;
 - Exibir informações dos filmes desses personagens;
-- Favoritar um personagem que irá persistir localmente no dispositivo
+- Favoritar um personagem que irá persistir localmente no dispositivo;
+- Ao pressionar na descrição do filme, irá ser exibido o texto completo sobre ele;
 
 ### :computer: Sobre a arquitetura
-- A versão do app usa o expo router, onde as telas são criadas a partir da pasta APP, cada arquivo gera um rota dentro do app
-- O app usa uma estilização baseada em TailwindCSS e shadcn ui, onde podemos criar interfaces mais rapidas e escalaveis
-- A arquitetura em si é baseada em MVVM, onde temos uma viewlModel que se torna uma camada de intersecção entre as funcionalidades e components
-- O testes cobrem componentes e viewModel, juntamente com as mock das chamadas API
+- A versão do app usa o expo router, onde as telas são criadas a partir da pasta APP, cada arquivo gera um rota dentro do app;
+- O app usa uma estilização baseada em TailwindCSS e shadcn ui, onde podemos criar interfaces mais rapidas e escalaveis;
+- A arquitetura em si é baseada em MVVM, onde temos uma viewlModel que se torna uma camada de intersecção entre as funcionalidades e components;
+- O testes cobrem componentes e viewModel, juntamente com as mock das chamadas API;
 - Foi utilizado o tanstack query para gerenciar estados HTTP e cacheamento das requisições, evitando multiplas chamadas e mais facilidade em codar;
-- Apliquei um infinitScroll com FlatList e tanstack query, posibilitando paginação ao rolar a lista ate o final, com feedback de carregamento baseado em skeleton
-- Utilizei o zustand para lidar com o state de personagens favoritados e sincronizar com o async storage
-- A estrutura de pastas tem um src e uma pasta features dentro dela, a pasta features divide a aplicação em contexto de funcionalidade, permitindo compreender com mais facilidade a organização do projeto
+- Apliquei um infinitScroll com FlatList e tanstack query, posibilitando paginação ao rolar a lista ate o final, com feedback de carregamento baseado em skeleton;
+- Utilizei o zustand para lidar com o state de personagens favoritados e sincronizar com o async storage;
+- A estrutura de pastas tem um src e uma pasta features dentro dela, a pasta features divide a aplicação em contexto de funcionalidade, permitindo compreender com mais facilidade a organização do projeto;
   
 
 ## :computer: Tecnologias Utilizadas
 - [React Native](https://reactnative.dev/)
+- [Expo](https://docs.expo.dev/)
 - [Native Wind](https://www.nativewind.dev/)
 - [NativeCn](https://nativecn.mintlify.app/introduction)
 - [TanstackQuery](https://tanstack.com/query/latest)
@@ -56,7 +58,7 @@ $ npm install
 # Execute a aplicação
 $ npm run start
 
-# Utilize um emulador ou uso o app do expo go
+# Utilize um emulador ou use o app do expo go para escanear o codigo QR Code
 ```
 
 
