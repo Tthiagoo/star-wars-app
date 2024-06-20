@@ -3,44 +3,14 @@ import { StatusBar, Text, View } from "react-native";
 import { Image } from "expo-image";
 import CharacterList from "../components/character-list";
 import { ISimpleCharacter } from "../types/people-list-types";
+import usePeopleList from "../hooks/use-people-list";
+import { blurhash } from "@/constants/blurhash";
+import { CustomText } from "@/components/text-custom";
+import { SkeletonLoading } from "../components/skeleton-loading";
 
 export default function IndexViewModel() {
-  const blurhash =
-    "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
-  const mockCharacters: ISimpleCharacter[] = [
-    {
-      name: "Luke Skywalker",
-      gender: "male",
-      height: "177",
-      skin_color: "white",
-      mass: "77",
-      favorite: true,
-    },
-    {
-      name: "Leia Organa",
-      skin_color: "white",
-      gender: "female",
-      height: "177",
-      mass: "78",
-      favorite: false,
-    },
-    {
-      name: "Leia Organa",
-      skin_color: "white",
-      gender: "female",
-      height: "177",
-      mass: "78",
-      favorite: false,
-    },
-    {
-      name: "Leia Organa",
-      skin_color: "white",
-      gender: "female",
-      height: "177",
-      mass: "78",
-      favorite: false,
-    },
-  ];
+  const { data, error, isLoading } = usePeopleList();
+
   return (
     <View className="flex items-center ">
       <Image
@@ -58,7 +28,8 @@ export default function IndexViewModel() {
         May the force be with you!
       </Text>
       <View style={{ height: 480, marginTop: 15 }}>
-        <CharacterList characters={mockCharacters} />
+        {isLoading && <SkeletonLoading />}
+        <CharacterList characters={data!} />
       </View>
     </View>
   );

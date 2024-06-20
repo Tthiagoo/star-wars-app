@@ -12,11 +12,13 @@ import { useColorScheme } from "nativewind";
 import { ThemeProvider } from "@/provider/theme-provider";
 import { ButtonToogle } from "@/components/button-theme";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const queryClient = new QueryClient();
   const { colorScheme: themeSelected } = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
@@ -40,13 +42,15 @@ export default function RootLayout() {
   });
   return (
     <ThemeProvider>
-      <StatusBar
-        backgroundColor={themeSelected == "light" ? "#e2e2e2" : "#1e293b"}
-      />
-      <SafeAreaView style={styles.container}>
-        <ButtonToogle />
-        <Slot />
-      </SafeAreaView>
+      <QueryClientProvider client={queryClient}>
+        <StatusBar
+          backgroundColor={themeSelected == "light" ? "#e2e2e2" : "#1e293b"}
+        />
+        <SafeAreaView style={styles.container}>
+          <ButtonToogle />
+          <Slot />
+        </SafeAreaView>
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }

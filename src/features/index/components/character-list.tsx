@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
-import { ISimpleCharacter } from "../types/people-list-types";
+import { ICharacter, ISimpleCharacter } from "../types/people-list-types";
 import { CharacterItem } from "./character-item";
 
 interface CharacterProps {
-  characters: ISimpleCharacter[];
+  characters: ICharacter[];
 }
 
 export const CharacterList: React.FC<CharacterProps> = ({ characters }) => {
