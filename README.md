@@ -48,7 +48,7 @@ O usuarios poderão entrar na tela inicial e visualizar uma lista
 
 ```bash
 # Clone este repositório
-$ git clone [https://github.com/Tthiagoo/githubCase](https://github.com/Tthiagoo/star-wars-app)
+$ git clone https://github.com/Tthiagoo/star-wars-app
 
 # Instale as dependências com npm ou yarn
 $ npm install
