@@ -7,6 +7,8 @@ import { useLocalSearchParams } from "expo-router";
 import { useMovieList } from "../hooks/use-movie-list";
 
 import { SkeletonMovieLoading } from "../components/skeleton-movie";
+import { Button } from "@/shared/Button";
+import { ButtonBack } from "@/shared/button-back";
 
 /**
  * Details caracter selected
@@ -20,7 +22,8 @@ export default function DetailsViewModel() {
   const { data: movies, error, isLoading } = useMovieList(data.films);
 
   return (
-    <ScrollView contentContainerStyle={{ padding: 15 }}>
+    <ScrollView contentContainerStyle={{ paddingHorizontal: 15 }}>
+      <ButtonBack />
       {/* Header Section */}
       <View className="bg-amber-500 p-5 rounded-md ">
         <Text className="text-white text-4xl font-bold text-center">
