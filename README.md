@@ -4,8 +4,10 @@
   
   <div align="center">
       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/a97955e2-0f8f-45ad-8baf-1146010fe592">
+       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/00068223-a92e-46c9-a04e-50a8d411f710">
 
   </div>
+
   
   ## :books: Sobre o projeto
 	
@@ -21,7 +23,13 @@ O usuarios poderão entrar na tela inicial e visualizar uma lista
 - Favoritar um personagem que irá persistir localmente no dispositivo
 
 ### :computer: Sobre a arquitetura
-- 
+- A versão do app usa o expo router, onde as telas são criadas a partir da pasta APP, cada arquivo gera um rota dentro do app
+- O app usa uma estilização baseada em TailwindCSS e shadcn ui, onde podemos criar interfaces mais rapidas e escalaveis
+- A arquitetura em si é baseada em MVVM, onde temos uma viewlModel que se torna uma camada de intersecção entre as funcionalidades e components
+- O testes cobrem componentes e viewModel, juntamente com as mock das chamadas API
+- Foi utilizado o tanstack query para gerenciar estados HTTP e cacheamento das requisições, evitando multiplas chamadas e mais facilidade em codar;
+- Apliquei um infinitScroll com FlatList e tanstack query, posibilitando paginação ao rolar a lista ate o final, com feedback de carregamento baseado em skeleton
+  
 
 ## :computer: Tecnologias Utilizadas
 - [React Native](https://reactnative.dev/)
