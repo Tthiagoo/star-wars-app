@@ -29,6 +29,8 @@ O usuarios poderão entrar na tela inicial e visualizar uma lista
 - O testes cobrem componentes e viewModel, juntamente com as mock das chamadas API
 - Foi utilizado o tanstack query para gerenciar estados HTTP e cacheamento das requisições, evitando multiplas chamadas e mais facilidade em codar;
 - Apliquei um infinitScroll com FlatList e tanstack query, posibilitando paginação ao rolar a lista ate o final, com feedback de carregamento baseado em skeleton
+- Utilizei o zustand para lidar com o state de personagens favoritados e sincronizar com o async storage
+- A estrutura de pastas tem um src e uma pasta features dentro dela, a pasta features divide a aplicação em contexto de funcionalidade, permitindo compreender com mais facilidade a organização do projeto
   
 
 ## :computer: Tecnologias Utilizadas
@@ -39,6 +41,7 @@ O usuarios poderão entrar na tela inicial e visualizar uma lista
 - [Commitizen](https://github.com/commitizen/cz-cli)
 - [Commitlint](https://commitlint.js.org/)
 - [Jest](https://jestjs.io/pt-BR/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
 - [React Native Testing Library](https://testing-library.com/docs/react-native-testing-library/intro/)
 
 ## 🚀 Como executar o projeto
