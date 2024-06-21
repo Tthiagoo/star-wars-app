@@ -66,5 +66,5 @@ $ npm run start
 
 ### Rodando a aplicação
 - Baixe o aab: https://drive.google.com/file/d/1a9VfhkQ6H9wGRxN76yczj0cGHZb5gO08/view?usp=sharing
-- Baixe o apk: https://drive.google.com/file/d/1XLFZafN6Y3gz3LqSGcCoREqyfIWNbgYB/view?usp=sharing
+- Baixe o apk: https://drive.google.com/file/d/1PbDOZ9y7BQn0U7xur6m8wy-7Hx1wFNvX/view?usp=sharing
   
