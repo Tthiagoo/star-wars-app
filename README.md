@@ -64,7 +64,6 @@ $ npm run start
 
 
 
-### Rodando a aplicação
-- Baixe o aab: https://drive.google.com/file/d/1a9VfhkQ6H9wGRxN76yczj0cGHZb5gO08/view?usp=sharing
+### Rodando a aplicação OBS: O link aqui em baixo esta mais atualizado, onde eu inclui apenas o botão de voltar na pagina de detalhes
 - Baixe o apk: https://drive.google.com/file/d/1PbDOZ9y7BQn0U7xur6m8wy-7Hx1wFNvX/view?usp=sharing
   
