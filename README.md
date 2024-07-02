@@ -4,11 +4,12 @@
   
   <div align="center">
       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/a97955e2-0f8f-45ad-8baf-1146010fe592">
-       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/00068223-a92e-46c9-a04e-50a8d411f710">
+       <img align="center" alt="Logo" title="#logo" width="250px" src="https://github.com/Tthiagoo/star-wars-app/assets/51219408/7cfa4849-5d76-4c71-87cd-074ac601a208">
 
   </div>
 
-  
+ 
+
   ## :books: Sobre o projeto
 	
 É um app feito com react native e expo onde podemos visulizar nomes de personagens de star wars e suas informações
@@ -63,7 +64,6 @@ $ npm run start
 
 
 
-### Rodando a aplicação
-- Baixe o aab: https://drive.google.com/file/d/1a9VfhkQ6H9wGRxN76yczj0cGHZb5gO08/view?usp=sharing
-- Baixe o apk: https://drive.google.com/file/d/1XLFZafN6Y3gz3LqSGcCoREqyfIWNbgYB/view?usp=sharing
+### Rodando a aplicação OBS: O link aqui em baixo esta mais atualizado, onde eu inclui apenas o botão de voltar na pagina de detalhes
+- Baixe o apk: https://drive.google.com/file/d/1PbDOZ9y7BQn0U7xur6m8wy-7Hx1wFNvX/view?usp=sharing
   
