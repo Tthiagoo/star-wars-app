@@ -1,6 +1,6 @@
 import { ScrollViewStyleReset } from "expo-router/html";
 import { type PropsWithChildren } from "react";
-
+import { AppRegistry } from "react-native";
 /**
  * This file is web-only and used to configure the root HTML for every web page during static rendering.
  * The contents of this function only run in Node.js environments and do not have access to the DOM or browser APIs.
@@ -8,6 +8,7 @@ import { type PropsWithChildren } from "react";
 export default function Root({ children }: PropsWithChildren) {
   return (
     <html lang="en">
+      W
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

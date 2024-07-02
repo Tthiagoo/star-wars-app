@@ -8,6 +8,7 @@ import { SkeletonLoading } from "../components/skeleton-loading";
 import { useInfiniteScroll } from "../hooks/use-people-list-infinite";
 import CharacterItem from "../components/character-item";
 import { Link } from "expo-router";
+import { CharacterList } from "../components/character-list";
 
 export function IndexViewModel() {
   const {
@@ -35,30 +36,10 @@ export function IndexViewModel() {
         May the force be with you!
       </Text>
       <View style={{ height: 480, marginTop: 15 }}>
-        <FlatList
-          data={infoDataPeopleResponse}
+        <CharacterList
+          dataPeopleResponse={infoDataPeopleResponse}
           onEndReached={onEndReached}
-          initialNumToRender={10}
-          removeClippedSubviews={true}
-          keyExtractor={(item, key) => item.name}
-          renderItem={({ item }) => (
-            <Link
-              href={{
-                pathname: "/details/[info]",
-                params: { info: JSON.stringify(item) }, // go to the next page with params info character
-              }}
-              asChild
-            >
-              <TouchableOpacity>
-                <CharacterItem info={item} />
-              </TouchableOpacity>
-            </Link>
-          )}
-          contentContainerStyle={{ paddingBottom: 20 }}
-          ListEmptyComponent={<SkeletonLoading />}
-          ListFooterComponent={
-            <View>{isFetchingNextPage && <SkeletonLoading />}</View>
-          }
+          isFetchingNextPage={isFetchingNextPage}
         />
       </View>
     </View>
